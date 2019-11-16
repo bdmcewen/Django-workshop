@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+    <title>Demo App</title>
+
+    <link rel="icon" type="image/x-icon" href="/static/favicon.ico">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    <link rel="stylesheet" href="/static/unc.css">
+
+</head>
+
+<body>
+
+    <header>
+        <div class="pull-right">
+            <img src="/static/Bear.png" class="img-rounded img-responsive" alt="UNC Bear" width="120">
+        </div>
+        <div>
+            {% block title %}
+            <h1>UNC Django Workshop</h1>
+            <h2>Demo App</h2>
+            {% endblock %}
+        </div>
+    </header>
+
+    <main>
+        {% block content %}
+        <h2>BASE UNC TEMPLATE</h2>
+        <p>No content is defined.</p>
+        {% endblock %}
+    </main>
+</body>
+
+</html>

@@ -1,0 +1,43 @@
+{% extends "unc.html" %}
+
+{% block title %}
+<h1>UNC Django Workshop</h1>
+<h2>Slides App</h2>
+{% endblock %}
+
+
+{% block content %}
+
+<h3>Slide Decks</h3>
+
+
+{% if object_list %}
+
+
+{% for slides in object_list %}
+
+<ul>
+    <li>
+        <a href="{{ slides.pk }}">
+            {{ slides.title }}
+        </a>
+    </li>
+</ul>
+
+{% endfor %}
+
+{% else %}
+
+<p>No slides available</p>
+
+{% endif %}
+
+
+<p>
+    <a href="/admin/slides/slidedeck/add/" class="button">
+        Add Slide Deck
+    </a>
+</p>
+
+
+{% endblock %}
