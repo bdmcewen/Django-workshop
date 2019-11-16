@@ -1,0 +1,38 @@
+{% extends "unc.html" %}
+
+{% block content %}
+
+<p>
+    Use these links to test all of the pages on this website.
+</p>
+<ul>
+    <li>
+        <a href="home">Visit Home</a>
+    </li>
+    <li>
+        <a href="notes">Visit Notes</a>
+    </li>
+    <li>
+        <a href="test">Visit Test</a>
+    </li>
+    <li>
+        <a href="random">Visit Random Page</a>
+    </li>
+</ul>
+
+
+<p>
+    Show some code
+</p>
+<pre>
+# Home View
+def home(request):
+    title = 'UNC Django Workshop'
+    subtitle = "App 2c - View Inheritance"
+    content = 'View Inheritance Demo'
+    data = dict(title=title, subtitle=subtitle, content=content)
+    return render(request, "home.html", data)
+</pre>
+
+
+{% endblock %}
